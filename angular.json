@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "movie-db-app"
+  "defaultProject": "movie-db-app",
+  "cli": {
+    "analytics": "33d65413-7317-4652-81d4-a0aa089b821c"
+  }
 }
