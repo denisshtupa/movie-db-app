@@ -1,4 +1,4 @@
-.calendar-cx-sidebar {
+.movie-db-sidebar {
   background-color: $db-dark-gary-1 !important;
   position: fixed;
   top: 0;
@@ -9,9 +9,9 @@
   left: 0;
   z-index: -1;
   /* Under the navbar */
-  padding: 80px 0 0;
+  padding: 80px 0 0 0;
   /*box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);*/
-  max-width: 240px;
+  width: 220px;
 
   .nav-item {
     margin: 0 0 10px 0;
@@ -29,7 +29,6 @@
         padding-top: 8px;
       }
 
-
       &:hover,
       &:focus {
         background-color: darken($db-dark-gary-1, 5%);
@@ -45,10 +44,8 @@
             color: white;
           }
         }
-
       }
     }
-
   }
 }
 
@@ -83,7 +80,8 @@
   position: relative;
   top: 0;
   height: calc(100vh - 50px);
-  padding-top: .5rem;
+  padding-top: .3rem;
+  padding-bottom: 4em;
   padding-left: 10px;
   overflow-x: hidden;
   overflow-y: auto;
