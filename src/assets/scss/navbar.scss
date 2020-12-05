@@ -1,0 +1,19 @@
+.navbar{
+    background-color: $db-status-blue !important;
+    color: $db-dark-gary-1 !important;
+    font-style: oblique;
+    font-family: cursive;
+    font-size: 19px;
+}
+
+.navbar-brand {
+    cursor: pointer;
+}
+
+a.nav-link, a.navbar-brand {
+    color: $db-dark-gary-1
+}
+
+.navbar-brand:hover {
+    opacity: 0.3;
+}

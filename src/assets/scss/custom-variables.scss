@@ -1,0 +1,40 @@
+
+// Blues
+$db-light-blue: #f2fbfd;
+$db-status-blue: #64bbe3;
+$db-blue: #00bceb;
+$db-vibrant-blue: #017cad;
+$db-indigo-blue: #005073;
+
+//Accents
+$db-green: #6ebe4a;
+$db-orange: #fbab18;
+$db-red: #e2231a;
+
+//Grays
+$db-light-gray-5: #f2f2f2;
+$db-light-gray-3: #dfdfdf;
+$db-light-gray-2: #c6c7ca;
+$db-mid-gray-2: #9e9ea2;
+$db-mid-gray-4: #b6b9bb;
+$db-dark-gary-4: #7f7f86;
+$db-dark-gary-3: #626469;
+$db-dark-gary-2: #58585b;
+$db-dark-gary-1: #39393b;
+
+//Status
+$db-status-turquoise: #14a792;
+$db-status-green: #6cc04a;
+$db-status-yellow: #ffcc00;
+$db-status-orange: #fbab18;
+$db-status-red: #e2231a;
+
+
+$primary:       $db-blue !default;
+$secondary:     $db-vibrant-blue !default;
+$success:       $db-green !default;
+$info:          $db-status-blue !default;
+$warning:       $db-orange !default;
+$danger:        $db-red !default;
+$light:         $db-light-gray-5 !default;
+$dark:          $db-dark-gary-2 !default;
