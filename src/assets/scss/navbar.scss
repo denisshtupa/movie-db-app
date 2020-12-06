@@ -1,20 +1,25 @@
-.navbar{
-    background-color: $db-status-blue !important;
-    color: $db-dark-gary-1 !important;
-    font-style: oblique;
-    font-family: cursive;
-    font-size: 19px;
-    z-index: 2600 !important;
+.navbar {
+  background-color: $db-status-blue !important;
+  color: $db-dark-gary-1 !important;
+  font-style: oblique;
+  font-family: cursive;
+  font-size: 19px;
+  z-index: 2600 !important;
 }
 
 .navbar-brand {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-a.nav-link, a.navbar-brand {
-    color: $db-dark-gary-1
+a.nav-link,
+a.navbar-brand {
+  color: $db-dark-gary-1
 }
 
 .navbar-brand:hover {
-    opacity: 0.3;
+  opacity: 0.3;
+}
+
+.nav-search {
+  padding-left:500px !important;
 }

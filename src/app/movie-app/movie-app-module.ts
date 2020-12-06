@@ -2,7 +2,7 @@ import { MovieService } from './../services/movie-service.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { FavoritesComponent, MainComponent, MovieAppComponent, MovieCardComponent, NavbarComponent, NewMoviesComponent, SidebarComponent } from '.';
+import { FavoritesComponent, MainComponent, MostViewedComponent, MovieAppComponent, MovieCardComponent, NavbarComponent, NewMoviesComponent, SidebarComponent } from '.';
 import { MovieAppRoutingModule } from './movie-app-routing.module';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { MovieAppRoutingModule } from './movie-app-routing.module';
         SidebarComponent,
         MovieCardComponent,
         FavoritesComponent,
-        NewMoviesComponent
+        NewMoviesComponent,
+        MostViewedComponent
     ],
     imports: [
         CommonModule,
