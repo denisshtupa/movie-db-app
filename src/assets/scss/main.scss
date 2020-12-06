@@ -82,10 +82,14 @@ div>a:nth-child(1)>div {
   width: 220px;
   height: 300px;
   overflow: hidden;
-
 }
 
 .movie-title {
   text-align: center !important;
   margin-top: 15px !important;
+}
+
+.movie-poster > img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
