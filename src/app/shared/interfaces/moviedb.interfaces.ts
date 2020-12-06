@@ -1,6 +1,6 @@
 export interface IMoviesResponsePaginated {
-    dates: IDatesInterval
-    results : IMovieDetail[]
+    dates?: IDatesInterval
+    results: IMovieDetail[]
     page: number
     total_pages: number
     total_results: number

@@ -1,24 +1,12 @@
-<div class="grid-movie-cards">
+<div class="grid-movie-cards" *ngIf="this.movieList">
+
+  <div *ngFor="let movie of this.movieList; let idx;">
+    <a class="card-link">
+      <div class="movie-card">
+        <movie-card [movie] ="movie"></movie-card>
+      </div>
+    </a>
+  </div>
 
 
-  <a class="card-link">
-    <div class="movie-card">
-      <movie-card></movie-card>
-    </div>
-  </a>
-
-  <a class="card-link">
-    <div class="movie-card">
-      <movie-card></movie-card>
-    </div>
-  </a>
-
-  <a class="card-link">
-    <div class="movie-card">
-      <movie-card></movie-card>
-    </div>
-  </a>
-
-</div>
-
-<custom-paginator></custom-paginator>
+<!-- <custom-paginator></custom-paginator> -->
