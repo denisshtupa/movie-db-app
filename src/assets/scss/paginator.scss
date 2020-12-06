@@ -1,0 +1,143 @@
+.paginator {
+  position: relative;
+  left: 200px;
+  padding: 50px;
+}
+
+
+.pagination {
+
+  >li>a,
+  >li>span {
+    border: 0;
+    border-radius: 30px !important;
+    transition: all .3s;
+    padding: 0px 11px;
+    margin: 0 3px;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: $dark;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: none;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      color: $dark;
+      background-color: $db-mid-gray-2;
+    }
+  }
+
+  >li.dropdown,
+  >li.dropup {
+    display: inline-block;
+    position: relative;
+  }
+
+  >li.dropdown>a,
+  >li.dropdown>span,
+  >li.dropup>a,
+  >li.dropup>span {
+    border-radius: 5px !important;
+    border: 1px solid lighten($db-dark-gary-2, 30%);
+
+    &:hover,
+    &:focus {
+      border-radius: 5px;
+      border: 1px solid lighten($db-dark-gary-2, 30%);
+    }
+
+  }
+
+  >.active>a,
+  >.active>span {
+    color: $dark;
+    text-align: center;
+    background-color: $db-blue;
+
+    &,
+    &:focus,
+    &:hover {
+      background-color: $db-blue;
+      border-color: $db-blue;
+      color: white;
+    }
+
+  }
+
+  a.disabled,
+  a.disabled>i {
+    color: $db-mid-gray-2;
+    background-color: transparent;
+    cursor: default;
+
+    &,
+    &:focus,
+    &:hover {
+      background-color: transparent;
+      border-color: transparent;
+      color: $db-mid-gray-2;
+      cursor: default;
+    }
+
+  }
+
+  // Colors
+  &.pagination-info {
+
+    >.active>a,
+    >.active>span {
+
+      &,
+      &:focus,
+      &:hover {
+        background-color: $info;
+        border-color: $info;
+      }
+    }
+  }
+
+  &.pagination-success {
+
+    >.active>a,
+    >.active>span {
+
+      &,
+      &:focus,
+      &:hover {
+        background-color: $success;
+        border-color: $success;
+      }
+    }
+  }
+
+  &.pagination-warning {
+
+    >.active>a,
+    >.active>span {
+
+      &,
+      &:focus,
+      &:hover {
+        background-color: $warning;
+        border-color: $warning;
+      }
+    }
+  }
+
+  &.pagination-danger {
+
+    >.active>a,
+    >.active>span {
+
+      &,
+      &:focus,
+      &:hover {
+        background-color: $danger;
+        border-color: $danger;
+      }
+    }
+  }
+}

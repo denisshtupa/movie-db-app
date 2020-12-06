@@ -38,3 +38,7 @@ $warning:       $db-orange !default;
 $danger:        $db-red !default;
 $light:         $db-light-gray-5 !default;
 $dark:          $db-dark-gary-2 !default;
+
+html {
+    overflow-x: hidden;
+}

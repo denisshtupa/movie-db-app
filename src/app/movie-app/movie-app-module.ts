@@ -1,3 +1,4 @@
+import { PaginatorComponent } from './../shared/general-components/paginator.component';
 import { MovieService } from './../services/movie-service.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +15,8 @@ import { MovieAppRoutingModule } from './movie-app-routing.module';
         MovieCardComponent,
         FavoritesComponent,
         NewMoviesComponent,
-        MostViewedComponent
+        MostViewedComponent,
+        PaginatorComponent
     ],
     imports: [
         CommonModule,
