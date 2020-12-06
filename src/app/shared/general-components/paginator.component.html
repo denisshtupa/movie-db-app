@@ -1,36 +1,22 @@
 <div class="paginator">
-  <div class="text-center">
-
+  <div class="text-center" *ngIf="paginationData">
     <ul class="pagination text-center">
-        
-    denis
       <li>
-
-        <a *ngIf="showPrevPageLink() && this.arrayPagination" (click)="navigateToPage(1)" title="First"><i
-            class="material-icons">first_page</i></a>
-        <a *ngIf="!showPrevPageLink() && this.arrayPagination" class="disabled"><i
-            class="material-icons">first_page</i></a>
+        <a [class.disabled]="!showPrevPageLink()" (click)="navigateToPage(1)" title="First">
+          <i class="fa fa-angle-double-left fa-2"></i></a>
       </li>
       <li>
-        <a *ngIf="showPrevPageLink() && this.arrayPagination" (click)="navigateToPrevPage()" title="Previous"><i
-            class="material-icons">chevron_left</i></a>
-        <a *ngIf="!showPrevPageLink() && this.arrayPagination" class="disabled"><i
-            class="material-icons">chevron_left</i></a>
+        <a [class.disabled]="!showPrevPageLink()" (click)="navigateToPrevPage()" title="Previous">
+          <i class="fa fa-angle-left fa-2"></i></a>
       </li>
       <li>
-        <a *ngIf="showNextPageLink() && this.arrayPagination" (click)="navigateToNextPage()" title="Next"><i
-            class="material-icons">chevron_right</i></a>
-        <a *ngIf="!showNextPageLink() && this.arrayPagination" class="disabled"><i
-            class="material-icons">chevron_right</i></a>
+        <a [class.disabled]="!showNextPageLink()" (click)="navigateToNextPage()" title="Next">
+          <i class="fa fa-angle-right fa-2"></i></a>
       </li>
       <li>
-        <a *ngIf="showNextPageLink() && this.arrayPagination" (click)="navigateToPage(paginationData.totalPages)"
-          title="Last"><i class="material-icons">last_page</i></a>
-        <a *ngIf="!showNextPageLink() && this.arrayPagination" class="disabled"><i
-            class="material-icons">last_page</i></a>
+        <a [class.disabled]="!showNextPageLink()" (click)="navigateToPage(paginationData.totalPages)" title="Last">
+          <i class="fa fa-angle-double-right fa-2"></i></a>
       </li>
     </ul>
-
   </div>
-  <!--paging end-->
 </div>

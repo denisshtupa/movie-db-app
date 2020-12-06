@@ -9,4 +9,10 @@
   </div>
 
 
-<!-- <custom-paginator></custom-paginator> -->
+<custom-paginator [paginationData]="_pagination" (NextPage)="loadNewMovies()"
+(PrevPage)="loadNewMovies()" (PageNavigation)="loadNewMovies()"></custom-paginator>
+
+<!-- 
+<able-pagination [paginationData]="_pagination" [pagingSize]="pagingSize" (NextPage)="getUserGroupsPaginated()"
+(PrevPage)="getUserGroupsPaginated()" (PageNavigation)="getUserGroupsPaginated()" (ChangePageSize)="changePageSize($event)"> -->
+<!-- </able-pagination> -->

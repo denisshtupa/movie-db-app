@@ -5,7 +5,7 @@ export interface IPagingSize {
 
 export interface IPagination {
     currentPage: number;
-    pageSize: number;
+    pageSize?: number;
     totalCount?: number;
     totalPages?: number;
 }

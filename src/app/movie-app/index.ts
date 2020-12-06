@@ -6,4 +6,4 @@ export * from "../movie-app/movie-card/movie-card.component";
 
 export * from "../movie-app/top-topics/favorites/favorites.component";
 export * from "../movie-app/top-topics/new-movies/new-movies.component";
-export * from "./top-topics/most-viewed/most-viewed.component";
+export * from "../movie-app/top-topics/most-viewed/most-viewed.component";

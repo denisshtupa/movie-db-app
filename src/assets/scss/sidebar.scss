@@ -29,6 +29,10 @@
         padding-top: 8px;
       }
 
+      div.rounded-circle > i {
+        transform: scale(1.4) !important;
+      }
+
       &:hover,
       &:focus {
         background-color: darken($db-dark-gary-1, 5%);
