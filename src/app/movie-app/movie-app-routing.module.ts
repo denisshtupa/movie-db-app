@@ -10,6 +10,10 @@ const routes: Routes = [
         redirectTo: 'movie-db'
     },
     {
+        path: 'movie-db',
+        component: MovieAppComponent
+    },
+    {
         path: 'movie-db/:type',
         component: MovieAppComponent
     },
