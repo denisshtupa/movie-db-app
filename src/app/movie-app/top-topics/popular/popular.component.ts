@@ -4,11 +4,11 @@ import { IMovieDetail, IMoviesResponsePaginated } from 'src/app/shared/interface
 import { IPagination } from 'src/app/shared/interfaces/paginator.interface';
 
 @Component({
-  selector: 'favorites',
-  templateUrl: './favorites.component.html'
+  selector: 'popular',
+  templateUrl: './popular.component.html'
 })
 
-export class FavoritesComponent {
+export class PopularComponent {
   public movieObject: IMoviesResponsePaginated | any;
   public movieList: Array<IMovieDetail> = [];
   public pagination: IPagination | any;
@@ -23,7 +23,7 @@ export class FavoritesComponent {
 
   public loadNewMovies(page: number = 1) {
     this.pagination
-    this._movieService.getFavoritesMovies(page).subscribe(res => {
+    this._movieService.getPopularMovies(page).subscribe(res => {
       this.movieObject = res;
       this.movieList = res.results;
       this.initPagination(page, res.total_pages, res.total_results, 20);
@@ -37,4 +37,5 @@ export class FavoritesComponent {
   private initPagination(pageNumber: number = 1, totalPages: number, totalElements: number, pageSize: number = 20) {
     this.pagination = { currentPage: pageNumber, totalCount: totalElements, totalPages: totalPages, pageSize: pageSize };
   }
+
 }

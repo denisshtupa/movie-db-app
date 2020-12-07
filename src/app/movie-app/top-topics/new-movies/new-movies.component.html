@@ -8,11 +8,10 @@
     </a>
   </div>
 
+</div>
 
-
-  <div class="container">
-      <custom-paginator *ngIf="this._pagination" [paginationData]="_pagination" (NextPage)="loadNewMoviesPaginated()"
-        (PrevPage)="loadNewMoviesPaginated()" (PageNavigation)="loadNewMoviesPaginated()"></custom-paginator>
-
-
-  </div>
+<div class="container">
+  <custom-paginator *ngIf="this.pagination" [paginationData]="pagination" (NextPage)="loadNewMoviesPaginated()"
+    (PrevPage)="loadNewMoviesPaginated()" (PageNavigation)="loadNewMoviesPaginated()">
+  </custom-paginator>
+</div>

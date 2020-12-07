@@ -14,8 +14,18 @@ export class MovieService {
     private _http: HttpClient
   ) { }
 
-  public getNewMovies(page: number = 1, api_key: string = "ed3ae19e285a1cfef392563106a3ff4c"): Observable<IMoviesResponsePaginated>{
+  public getNewMovies(page: number = 1, api_key: string = "ed3ae19e285a1cfef392563106a3ff4c"): Observable<IMoviesResponsePaginated> {
     const url = `${this.moviedbAPI}/movie/upcoming?api_key=${api_key}&page=${page}`;
+    return this._http.get<IMoviesResponsePaginated>(url);
+  }
+
+  public getPopularMovies(page: number = 1, api_key: string = "ed3ae19e285a1cfef392563106a3ff4c"): Observable<IMoviesResponsePaginated> {
+    const url = `${this.moviedbAPI}/movie/popular?api_key=${api_key}&page=${page}`;
+    return this._http.get<IMoviesResponsePaginated>(url);
+  }
+
+  public getFavoritesMovies(page: number = 1, api_key: string = "ed3ae19e285a1cfef392563106a3ff4c"): Observable<IMoviesResponsePaginated> {
+    const url = `${this.moviedbAPI}/movie/top_rated?api_key=${api_key}&page=${page}`;
     return this._http.get<IMoviesResponsePaginated>(url);
   }
 

@@ -1,11 +1,10 @@
 .paginator {
-  position: relative;
-  left: 400px;
-  padding: 40px;
+  position: absolute;
+  padding: 60px 0 20px 275px;
   transform: scale(2);
-  cursor: pointer !important
+  color: $db-dark-gary-1 !important;
+  cursor: pointer !important;
 }
-
 
 .pagination {
 
@@ -66,7 +65,6 @@
       border-color: $db-blue;
       color: white;
     }
-
   }
 
   a.disabled,
@@ -86,60 +84,4 @@
 
   }
 
-  // Colors
-  &.pagination-info {
-
-    >.active>a,
-    >.active>span {
-
-      &,
-      &:focus,
-      &:hover {
-        background-color: $info;
-        border-color: $info;
-      }
-    }
-  }
-
-  &.pagination-success {
-
-    >.active>a,
-    >.active>span {
-
-      &,
-      &:focus,
-      &:hover {
-        background-color: $success;
-        border-color: $success;
-      }
-    }
-  }
-
-  &.pagination-warning {
-
-    >.active>a,
-    >.active>span {
-
-      &,
-      &:focus,
-      &:hover {
-        background-color: $warning;
-        border-color: $warning;
-      }
-    }
-  }
-
-  &.pagination-danger {
-
-    >.active>a,
-    >.active>span {
-
-      &,
-      &:focus,
-      &:hover {
-        background-color: $danger;
-        border-color: $danger;
-      }
-    }
-  }
 }
