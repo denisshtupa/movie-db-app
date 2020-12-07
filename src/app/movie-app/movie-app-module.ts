@@ -3,7 +3,7 @@ import { MovieService } from './../services/movie-service.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { FavoritesComponent, MainComponent, MovieAppComponent, MovieCardComponent, NavbarComponent, NewMoviesComponent, PopularComponent, SidebarComponent } from '.';
+import { ActionComponent, AdventureComponent, AnimationComponent, ComedyComponent, DocumentaryComponent, DramaComponent, FavoritesComponent, HorrorComponent, MainComponent, MovieAppComponent, MovieCardComponent, NavbarComponent, NewMoviesComponent, PopularComponent, RomanceComponent, SidebarComponent } from '.';
 import { MovieAppRoutingModule } from './movie-app-routing.module';
 
 @NgModule({
@@ -16,7 +16,15 @@ import { MovieAppRoutingModule } from './movie-app-routing.module';
         FavoritesComponent,
         NewMoviesComponent,
         PopularComponent,
-        PaginatorComponent
+        PaginatorComponent,
+        ActionComponent,
+        AdventureComponent,
+        AnimationComponent,
+        ComedyComponent,
+        DocumentaryComponent,
+        DramaComponent,
+        HorrorComponent,
+        RomanceComponent
     ],
     imports: [
         CommonModule,
@@ -28,4 +36,5 @@ import { MovieAppRoutingModule } from './movie-app-routing.module';
     ],
     bootstrap: []
 })
+
 export class MovieModule { }

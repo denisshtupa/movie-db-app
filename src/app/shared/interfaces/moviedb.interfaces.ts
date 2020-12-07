@@ -27,3 +27,8 @@ export interface IMovieDetail {
     vote_average: string
     vote_count: number
 }
+
+export interface IGenres {
+    id: number
+    name: string
+}

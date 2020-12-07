@@ -33,26 +33,20 @@
     </ul>
 
     <div [style.margin-top]="'40px'">
-      <h4 [style.color]="'#017cad'">CATEGORIES</h4>
+      <h4 [style.color]="'#017cad'" [style.margin-left]="'44px'">GENRES</h4>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <button class="btn btn-link btn-block nav-link">
+          <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/action']"
+            [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-bolt"></i>
+              <i class="fa fa-motorcycle"></i>
             </div>
-            <div class="d-md-block d-none">Horror</div>
+            <div class="d-md-block d-none">Action</div>
           </button>
         </li>
         <li class="nav-item">
-          <button class="btn btn-link btn-block nav-link">
-            <div class="rounded-circle">
-              <i class="fa fa-heart"></i>
-            </div>
-            <div class="d-md-block d-none">Romance</div>
-          </button>
-        </li>
-        <li class="nav-item">
-          <button class="btn btn-link btn-block nav-link">
+          <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/adventure']"
+            [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
               <i class="fa fa-rocket"></i>
             </div>
@@ -60,15 +54,35 @@
           </button>
         </li>
         <li class="nav-item">
-          <button class="btn btn-link btn-block nav-link">
+          <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/animation']"
+            [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
               <i class="fa fa-paw"></i>
             </div>
-            <div class="d-md-block d-none">Animated</div>
+            <div class="d-md-block d-none">Animation</div>
           </button>
         </li>
         <li class="nav-item">
-          <button class="btn btn-link btn-block nav-link">
+          <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/comedy']"
+            [routerLinkActive]="'active-link'">
+            <div class="rounded-circle">
+              <i class="fa fa-users"></i>
+            </div>
+            <div class="d-md-block d-none">Comedy</div>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/documentary']"
+            [routerLinkActive]="'active-link'">
+            <div class="rounded-circle">
+              <i class="fa fa-book"></i>
+            </div>
+            <div class="d-md-block d-none">Documentary</div>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/drama']"
+            [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
               <i class="fa fa-heartbeat"></i>
             </div>
@@ -76,11 +90,21 @@
           </button>
         </li>
         <li class="nav-item">
-          <button class="btn btn-link btn-block nav-link">
+          <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/horror']"
+            [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-users"></i>
+              <i class="fa fa-bolt"></i>
             </div>
-            <div class="d-md-block d-none">Comedy</div>
+            <div class="d-md-block d-none">Horror</div>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/romance']"
+            [routerLinkActive]="'active-link'">
+            <div class="rounded-circle">
+              <i class="fa fa-heart"></i>
+            </div>
+            <div class="d-md-block d-none">Romance</div>
           </button>
         </li>
       </ul>
