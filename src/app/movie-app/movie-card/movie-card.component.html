@@ -7,13 +7,13 @@
   <h6>{{this.movie.release_date | date}}</h6>
 </div>
 
-<div class="rating" [style.background-color]="this.movie.vote_average > 7 ? '#6cc04a': '#e24d45'">
-  <ng-container *ngIf="this.movie.vote_average > 7"> <i class="fa fa-star"></i></ng-container>
+<div class="rating" [style.background-color]="this.movie.vote_average >= 7 ? '#6cc04a': '#e24d45'">
+  <ng-container *ngIf="this.movie.vote_average >= 7"> <i class="fa fa-star"></i></ng-container>
   <ng-container *ngIf="this.movie.vote_average < 7"> <i class="fa fa-star-half"></i></ng-container>
   {{this.movie.vote_average}}
 </div>
 
-<div class="voters" [style.background-color]="this.movie.vote_count > 1000 ? '#6cc04a': '#e24d45'">
+<div class="voters" [style.background-color]="this.movie.vote_count >= 1000 ? '#6cc04a': '#e24d45'">
   <i class="fa fa-user"></i>
   {{this.movie.vote_count}}
 </div>
