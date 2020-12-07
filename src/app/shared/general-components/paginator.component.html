@@ -9,6 +9,9 @@
         <a [class.disabled]="!showPrevPageLink()" (click)="navigateToPrevPage()" title="Previous">
           <i class="fa fa-angle-left fa-2"></i></a>
       </li>
+      <li *ngFor="let pageNr of this.pages; let idx" [class.active]="pageNr == this.paginationData.currentPage">
+        <a (click)="navigateToPage(pageNr)">{{pageNr}}</a>
+      </li>
       <li>
         <a [class.disabled]="!showNextPageLink()" (click)="navigateToNextPage()" title="Next">
           <i class="fa fa-angle-right fa-2"></i></a>

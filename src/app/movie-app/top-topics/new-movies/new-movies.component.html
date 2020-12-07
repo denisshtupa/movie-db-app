@@ -3,16 +3,16 @@
   <div *ngFor="let movie of this.movieList; let idx;">
     <a class="card-link">
       <div class="movie-card">
-        <movie-card [movie] ="movie"></movie-card>
+        <movie-card [movie]="movie"></movie-card>
       </div>
     </a>
   </div>
 
 
-<custom-paginator [paginationData]="_pagination" (NextPage)="loadNewMovies()"
-(PrevPage)="loadNewMovies()" (PageNavigation)="loadNewMovies()"></custom-paginator>
 
-<!-- 
-<able-pagination [paginationData]="_pagination" [pagingSize]="pagingSize" (NextPage)="getUserGroupsPaginated()"
-(PrevPage)="getUserGroupsPaginated()" (PageNavigation)="getUserGroupsPaginated()" (ChangePageSize)="changePageSize($event)"> -->
-<!-- </able-pagination> -->
+  <div class="container">
+      <custom-paginator *ngIf="this._pagination" [paginationData]="_pagination" (NextPage)="loadNewMoviesPaginated()"
+        (PrevPage)="loadNewMoviesPaginated()" (PageNavigation)="loadNewMoviesPaginated()"></custom-paginator>
+
+
+  </div>

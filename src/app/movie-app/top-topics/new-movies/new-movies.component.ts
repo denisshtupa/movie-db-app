@@ -24,20 +24,28 @@ export class NewMoviesComponent {
         this.loadNewMovies();
     }
 
-    public loadNewMovies() {
-        this._movieService.getNewMovies().subscribe(res => {
+    public loadNewMovies(page: number = 1) {
+        this._pagination
+        this._movieService.getNewMovies(page).subscribe(res => {
             this.movieObject = res;
             console.log("🚀 ~ file: new-movies.component.ts ~ line 29 ~ NewMoviesComponent ~ this._movieService.getNewMovies ~ res", res)
 
             this.movieList = res.results;
-            this.initPagination(1, res.total_pages, res.total_results, 20)
+            
+            this.initPagination(page, res.total_pages, res.total_results, 20);
+
         })
+    }
+
+    public loadNewMoviesPaginated() {
+        this.loadNewMovies(this._pagination.currentPage);
     }
 
 
 
     private initPagination(pageNumber: number = 1, totalPages: number, totalElements: number, pageSize: number = 20) {
         this._pagination = { currentPage: pageNumber, totalCount: totalElements, totalPages: totalPages, pageSize: pageSize };
+        console.log("🚀 ~ file: new-movies.component.ts ~ line 41 ~ NewMoviesComponent ~ initPagination ~ this._pagination", this._pagination)
     }
 
 

@@ -15,7 +15,6 @@ export class MovieCardComponent {
     }
 
     ngOnInit() {
-        console.log("🚀 ~ file: movie-card.component.ts ~ line 14 ~ MovieCardComponent ~ movie", this.movie)
 
     }
 
