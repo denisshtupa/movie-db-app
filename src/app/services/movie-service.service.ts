@@ -1,3 +1,4 @@
+import { ICredits } from './../shared/interfaces/moviedb.interfaces';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -37,6 +38,11 @@ export class MovieService {
   public getMovieDetails(movieId: number, api_key: string = "ed3ae19e285a1cfef392563106a3ff4c"): Observable<IMovieDetail> {
     const url = `${this.moviedbAPI}/movie/${movieId}?api_key=${api_key}`;
     return this._http.get<IMovieDetail>(url);
+  }
+
+  public getMovieCredits(movieId: number, api_key: string = "ed3ae19e285a1cfef392563106a3ff4c"): Observable<ICredits> {
+    const url = `${this.moviedbAPI}/movie/${movieId}/credits?api_key=${api_key}`;
+    return this._http.get<ICredits>(url);
   }
 
 }
