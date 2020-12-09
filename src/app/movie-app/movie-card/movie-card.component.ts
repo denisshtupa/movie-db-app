@@ -1,5 +1,6 @@
 import { IMovieDetail } from './../../shared/interfaces/moviedb.interfaces';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'movie-card',
@@ -9,13 +10,19 @@ import { Component, Input } from '@angular/core';
 export class MovieCardComponent {
 
     @Input() movie: IMovieDetail | any = null;
+    @Input() type: string = "";
 
-    constructor() {
+
+    constructor(private _router: Router) {
 
     }
 
     ngOnInit() {
 
+    }
+
+    public navigateToDetailsPage() {
+        this._router.navigateByUrl("movie-db/new-movies/movie/" + this.movie.id);
     }
 
 }

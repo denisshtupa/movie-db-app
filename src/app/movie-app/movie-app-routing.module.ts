@@ -1,3 +1,4 @@
+import { MovieDetailsComponent } from './main/movie-details.component';
 import { FavoritesComponent } from './top-topics/favorites/favorites.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -16,6 +17,10 @@ const routes: Routes = [
     {
         path: 'movie-db/:type',
         component: MovieAppComponent
+    },
+    {
+        path: 'movie-db/:type/movie/:movieId',
+        component: MovieDetailsComponent
     },
     {
         path: '**',

@@ -3,13 +3,14 @@ import { MovieService } from './../services/movie-service.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ActionComponent, AdventureComponent, AnimationComponent, ComedyComponent, DocumentaryComponent, DramaComponent, FavoritesComponent, HorrorComponent, MainComponent, MovieAppComponent, MovieCardComponent, NavbarComponent, NewMoviesComponent, PopularComponent, RomanceComponent, SidebarComponent } from '.';
+import { ActionComponent, AdventureComponent, AnimationComponent, ComedyComponent, DocumentaryComponent, DramaComponent, FavoritesComponent, HorrorComponent, MainComponent, MovieAppComponent, MovieCardComponent, MovieDetailsComponent, NavbarComponent, NewMoviesComponent, PopularComponent, RomanceComponent, SidebarComponent } from '.';
 import { MovieAppRoutingModule } from './movie-app-routing.module';
 
 @NgModule({
     declarations: [
         MovieAppComponent,
         MainComponent,
+        MovieDetailsComponent,
         NavbarComponent,
         SidebarComponent,
         MovieCardComponent,

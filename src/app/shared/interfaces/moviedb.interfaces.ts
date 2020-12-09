@@ -15,7 +15,7 @@ export interface IMovieDetail {
     id: number
     adult: boolean
     backdrop_path: string
-    genre_ids: number[]
+    genres: IGenres[]
     original_language: string
     original_title: string
     overview: string
