@@ -11,14 +11,13 @@
     </div>
     <div class="details-general-section">
       <div *ngIf="this.movieDetail">
-        <h1 [style.font-size]="'40px'" [style.font-weight]="'bold'">Upside-Down Magic</h1>
+        <h1 [style.font-size]="'40px'" [style.font-weight]="'bold'">{{this.movieDetail.title}}</h1>
         <h2>Rating: {{this.movieDetail.vote_average}} / 10</h2>
         <div>
           <div class="stars-outer">
             <div class="stars-inner" [style.width]="this.movieDetail.vote_average * 10+'%'"></div>
           </div>
         </div>
-        <h3>Find your magic</h3>
         <div>
           <h3>{{this.returnGenres(this.movieDetail.genres)}}</h3>
         </div>
@@ -29,16 +28,16 @@
   </div>
 </div>
 
-<div class="movie-detail-summary">
+<div class="movie-detail-summary" *ngIf="this.movieDetail">
   {{this.movieDetail.overview}}
 
   <div class="movie-detail-rate">
-    <h3> Rate "<strong>{{this.movieDetail.original_title}}</strong>"</h3>
+    <h3> Rate "<strong>{{this.movieDetail.title}}</strong>"</h3>
   </div>
 </div>
 
-<div class="summary">
-  <h2> Cast of "<strong>{{this.movieDetail.original_title}}</strong>"</h2>
+<div class="cast" *ngIf="this.movieDetail">
+  <h2> Cast of "<strong>{{this.movieDetail.title}}</strong>"</h2>
 
   <div class="grid-movie-cards" *ngIf="this.movieCast">
     <div *ngFor="let cast of this.movieCast; let idx;">

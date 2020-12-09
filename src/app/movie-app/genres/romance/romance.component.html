@@ -3,7 +3,7 @@
   <div *ngFor="let movie of this.movieList; let idx;">
     <a class="card-link">
       <div class="movie-card">
-        <movie-card [movie]="movie"></movie-card>
+        <movie-card [movie]="movie" [type]="'romance'"></movie-card>
       </div>
     </a>
   </div>

@@ -22,7 +22,7 @@ export class MovieCardComponent {
     }
 
     public navigateToDetailsPage() {
-        this._router.navigateByUrl("movie-db/new-movies/movie/" + this.movie.id);
+        this._router.navigateByUrl("movie-db/" + this.type +"/movie/" + this.movie.id);
     }
 
 }

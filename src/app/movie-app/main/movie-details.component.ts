@@ -37,24 +37,15 @@ export class MovieDetailsComponent {
     private getMovieDetailsById() {
         this._movieService.getMovieDetails(this.movieId).subscribe(res => {
             this.movieDetail = res;
-
             this.backgroundImageUrl = 'url("https://image.tmdb.org/t/p/original' + this.movieDetail.backdrop_path;
             this.posterImageUrl = 'https://image.tmdb.org/t/p/original' + this.movieDetail.poster_path;
-
-            console.log("🚀 ~ file: movie-details.component.ts ~ line 30 ~ MovieDetailsComponent ~ this._movieService.getMovieDetails ~ this.movieDetail", this.movieDetail)
         })
     }
 
     private getMovieCreditsById() {
         this._movieService.getMovieCredits(this.movieId).subscribe(res => {
             this.movieCredits = res;
-            console.log("🚀 ~ file: movie-details.component.ts ~ line 49 ~ MovieDetailsComponent ~ this._movieService.getMovieCredits ~ this.movieCredits", this.movieCredits)
-
-            this.getTop20Cast(this.movieCredits);
-            // this.backgroundImageUrl = 'url("https://image.tmdb.org/t/p/original' + this.movieDetail.backdrop_path;
-            // this.posterImageUrl = 'https://image.tmdb.org/t/p/original' + this.movieDetail.poster_path;
-
-            // console.log("🚀 ~ file: movie-details.component.ts ~ line 30 ~ MovieDetailsComponent ~ this._movieService.getMovieDetails ~ this.movieDetail", this.movieDetail)
+            this.getTop20Cast(this.movieCredits);           
         })
     }
 
@@ -64,7 +55,8 @@ export class MovieDetailsComponent {
 
         movieCredits.cast.sort((a, b) => a.popularity < b.popularity ? -1 : a.popularity > b.popularity ? 1 : 0);
 
-        this.movieCast = movieCredits.cast.slice(0, 18);
+        this.movieCast = movieCredits.cast.filter(mov => mov.profile_path != null).slice(0, 18);
+        
         console.log("🚀 ~ file: movie-details.component.ts ~ line 68 ~ MovieDetailsComponent ~ getTop20Cast ~ this.movieCast", this.movieCast)
 
     }
