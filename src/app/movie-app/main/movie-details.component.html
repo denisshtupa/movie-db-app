@@ -32,7 +32,40 @@
   {{this.movieDetail.overview}}
 
   <div class="movie-detail-rate">
-    <h3> Rate "<strong>{{this.movieDetail.title}}</strong>"</h3>
+    <!-- <h3> Rate "<strong>{{this.movieDetail.title}}</strong>"</h3> -->
+
+    <div class="centerr">
+      <div class="starss">
+        <input type="radio" id="ten" name="rate" [(ngModel)]="reviewValue" value="10">
+        <label for="ten"></label>
+        <input type="radio" id="nine" name="rate" [(ngModel)]="reviewValue" value="9">
+        <label for="nine"></label>
+        <input type="radio" id="eight" name="rate" [(ngModel)]="reviewValue" value="8">
+        <label for="eight"></label>
+        <input type="radio" id="seven" name="rate" [(ngModel)]="reviewValue" value="7">
+        <label for="seven"></label>
+        <input type="radio" id="six" name="rate" [(ngModel)]="reviewValue" value="6">
+        <label for="six"></label>
+        <input type="radio" id="five" name="rate" [(ngModel)]="reviewValue" value="5">
+        <label for="five"></label>
+        <input type="radio" id="four" name="rate" [(ngModel)]="reviewValue" value="4">
+        <label for="four"></label>
+        <input type="radio" id="three" name="rate" [(ngModel)]="reviewValue" value="3">
+        <label for="three"></label>
+        <input type="radio" id="two" name="rate" [(ngModel)]="reviewValue" value="2">
+        <label for="two"></label>
+        <input type="radio" id="one" name="rate" [(ngModel)]="reviewValue" value="1">
+        <label for="one"></label>
+
+        <div class="review-buttons">
+          <button type="button" class="btn btn-success" (click)="addRating()">Add rating</button>
+          <button type="button" class="btn btn-danger" (click)="removeRating()">Remove rating</button>
+          <span *ngIf="reviewAdded" class="result">Thank you for review</span>
+        </div>
+      </div>
+
+
+    </div>
   </div>
 </div>
 

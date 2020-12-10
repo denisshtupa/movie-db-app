@@ -9,7 +9,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class MovieDetailsComponent {
-
     public type: string | null = "new-movies";
     public movieId: number = 0;
     public movieDetail: IMovieDetail | any;
@@ -17,6 +16,8 @@ export class MovieDetailsComponent {
     public movieCast: ICast | any;
     public backgroundImageUrl: string = "";
     public posterImageUrl: string = "";
+    public reviewValue: any;
+    public reviewAdded: boolean = false;
 
     constructor(private _activatedRoute: ActivatedRoute,
         private _router: Router,
@@ -45,23 +46,17 @@ export class MovieDetailsComponent {
     private getMovieCreditsById() {
         this._movieService.getMovieCredits(this.movieId).subscribe(res => {
             this.movieCredits = res;
-            this.getTop20Cast(this.movieCredits);           
+            this.getTop20Cast(this.movieCredits);
         })
     }
 
     private getTop20Cast(movieCredits: ICredits) {
         this.movieCast = [];
-        // x.sort((a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0)
-
         movieCredits.cast.sort((a, b) => a.popularity < b.popularity ? -1 : a.popularity > b.popularity ? 1 : 0);
-
         this.movieCast = movieCredits.cast.filter(mov => mov.profile_path != null).slice(0, 18);
-        
-        console.log("🚀 ~ file: movie-details.component.ts ~ line 68 ~ MovieDetailsComponent ~ getTop20Cast ~ this.movieCast", this.movieCast)
-
     }
 
-    public returnGenres(genresList: IGenres[]): string{
+    public returnGenres(genresList: IGenres[]): string {
         let genresConcated: string[] = [];
         genresList.forEach(element => {
             genresConcated.push(element.name);
@@ -72,5 +67,13 @@ export class MovieDetailsComponent {
 
     public goToPreviousPage() {
         this._router.navigateByUrl("movie-db/" + this.type);
+    }
+
+    public addRating() {
+        this.reviewAdded = true;
+    }
+
+    public removeRating() {
+        this.reviewAdded = false;
     }
 }

@@ -14,6 +14,16 @@
   z-index: 1;
 }
 
+.movie-details::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .back-page {
   transform: scale(6) !important;
   cursor: pointer;
@@ -72,7 +82,7 @@
   font-size: 30px;
 }
 
-.cast > h2 {
+.cast>h2 {
   margin: 100px;
   color: $db-orange;
   text-align: center;
@@ -93,13 +103,87 @@
 .movie-detail-summary {
   padding: 50px;
   background-color: #c9e8bb;
-  color: $db-red;
+  color: #e24d45;
   width: 100%;
+  min-height: 400px !important;
+  height: auto;
   font-size: 25px;
   font-style: oblique;
-  min-height: 300px;
 }
 
 .movie-detail-rate {
-  margin-top:30px;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+.centerr {
+  position: absolute;
+}
+
+.centerr .starss {
+  height: 150px;
+  width: 800px;
+  text-align: center;
+}
+
+.starss input {
+  display: none;
+}
+
+.starss label {
+  float: right;
+  font-size: 60px;
+  cursor: pointer;
+  color: lightgrey;
+  margin: 0 5px;
+  text-shadow: 1px 1px #bbb;
+}
+
+.starss label:before {
+  content: "\f005";
+  font-family: Font Awesome\ 5 Free;
+}
+
+.starss input:checked~label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+
+.starss:not(:checked)>label:hover,
+.starss:not(:checked)>label:hover~label {
+  color: gold;
+}
+
+.starss input:checked>label:hover,
+.starss input:checked>label:hover~label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+
+.review-buttons {
+  position: relative;
+  left: 750px;
+  top: -63px;
+
+  .btn-danger {
+    margin-left: 10px;
+    width: 150px
+  }
+
+  .btn-success {
+    width: 150px
+  }
+
+  span {
+    position: relative;
+    left: 144px;
+    top: -3px;
+    color: #e311e6;
+  }
 }

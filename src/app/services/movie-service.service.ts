@@ -45,4 +45,9 @@ export class MovieService {
     return this._http.get<ICredits>(url);
   }
 
+  public postRating(movieId: number, api_key: string = "ed3ae19e285a1cfef392563106a3ff4c"): Observable<ICredits> {
+    const url = `${this.moviedbAPI}/movie/${movieId}/rating?api_key=${api_key}`;
+    return this._http.get<ICredits>(url);
+  }
+
 }
