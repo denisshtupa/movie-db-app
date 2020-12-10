@@ -23,7 +23,6 @@ export class RomanceComponent {
     }
 
     public loadNewMovies(page: number = 1) {
-        this.pagination
         this._movieService.getMoviesByGenre(page, GenresEnum.Romance).subscribe(res => {
             this.movieObject = res;
             this.movieList = res.results;

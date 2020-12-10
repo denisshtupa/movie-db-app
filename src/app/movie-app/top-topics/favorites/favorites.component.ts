@@ -22,7 +22,6 @@ export class FavoritesComponent {
   }
 
   public loadNewMovies(page: number = 1) {
-    this.pagination
     this._movieService.getFavoritesMovies(page).subscribe(res => {
       this.movieObject = res;
       this.movieList = res.results;

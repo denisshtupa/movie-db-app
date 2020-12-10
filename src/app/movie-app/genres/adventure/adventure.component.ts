@@ -23,7 +23,6 @@ export class AdventureComponent {
     }
 
     public loadNewMovies(page: number = 1) {
-        this.pagination
         this._movieService.getMoviesByGenre(page, GenresEnum.Adventure).subscribe(res => {
             this.movieObject = res;
             this.movieList = res.results;

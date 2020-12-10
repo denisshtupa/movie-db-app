@@ -24,9 +24,7 @@ export class MovieDetailsComponent {
         private _movieService: MovieService) {
         this._activatedRoute.url.subscribe(e => {
             this.type = this._activatedRoute.snapshot.paramMap.get("type");
-            console.log("🚀 ~ file: movie-details.component.ts ~ line 17 ~ MovieDetailsComponent ~ constructor ~  this.type", this.type)
             this.movieId = Number(this._activatedRoute.snapshot.paramMap.get("movieId"));
-            console.log("🚀 ~ file: movie-details.component.ts ~ line 18 ~ MovieDetailsComponent ~ constructor ~ this.movieId", this.movieId)
         });
     }
 

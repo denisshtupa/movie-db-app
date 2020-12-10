@@ -22,7 +22,6 @@ export class PopularComponent {
   }
 
   public loadNewMovies(page: number = 1) {
-    this.pagination
     this._movieService.getPopularMovies(page).subscribe(res => {
       this.movieObject = res;
       this.movieList = res.results;

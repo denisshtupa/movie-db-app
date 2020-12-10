@@ -22,7 +22,6 @@ export class NewMoviesComponent {
     }
 
     public loadNewMovies(page: number = 1) {
-        this.pagination
         this._movieService.getNewMovies(page).subscribe(res => {
             this.movieObject = res;
             this.movieList = res.results;            

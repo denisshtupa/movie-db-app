@@ -23,7 +23,6 @@ export class HorrorComponent {
     }
 
     public loadNewMovies(page: number = 1) {
-        this.pagination
         this._movieService.getMoviesByGenre(page, GenresEnum.Horror).subscribe(res => {
             this.movieObject = res;
             this.movieList = res.results;

@@ -50,4 +50,11 @@ export class MovieService {
     return this._http.get<ICredits>(url);
   }
 
+  public searchGloballyForMovie(searchString: string, page: number = 1, api_key: string = "ed3ae19e285a1cfef392563106a3ff4c"): Observable<IMoviesResponsePaginated> {
+    const url = `${this.moviedbAPI}/search/movie?api_key=${api_key}&query=${searchString}&page=${page}&include_adult=false`;
+    return this._http.get<IMoviesResponsePaginated>(url);
+  }
+
+ // https://api.themoviedb.org/3/search/movie?api_key=ed3ae19e285a1cfef392563106a3ff4c&query=den&page=1&include_adult=false
+
 }
