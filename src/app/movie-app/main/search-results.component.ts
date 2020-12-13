@@ -46,9 +46,7 @@ export class SearchResultsComponent {
         if (val) {
             this._movieService.searchGloballyForMovie(val, page).subscribe(res => {
                 this.movieObject = res;
-                console.log("🚀 ~ file: search-results.component.ts ~ line 40 ~ SearchResultsComponent ~ this._movieService.searchGloballyForMovie ~  this.movieObject", this.movieObject)
                 this.movieList = res.results;
-                console.log("🚀 ~ file: search-results.component.ts ~ line 41 ~ SearchResultsComponent ~ this._movieService.searchGloballyForMovie ~ this.movieList", this.movieList)
                 this.initPagination(page, res.total_pages, res.total_results, 20);
 
             })
