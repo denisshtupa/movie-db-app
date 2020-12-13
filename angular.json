@@ -29,8 +29,9 @@
             "assets": [
               "src/assets"
             ],
-            "styles": [ 
-              "node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css"
+            "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "src/styles.scss"          
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
