@@ -11,4 +11,4 @@ app.get('/*', function (req, res) {
   });
 });
 
-app.listen(process.env.PORT || 4200);
+app.listen(process.env.PORT || 8080);
