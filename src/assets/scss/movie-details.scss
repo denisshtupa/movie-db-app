@@ -15,6 +15,39 @@
   z-index: -1;
 }
 
+.custom-bradcrumb {
+  background-color: rgb(0, 191, 255) !important;
+  color: black !important;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: cursive;
+  text-transform: uppercase;
+}
+
+nav > ol {
+  background-color: rgb(218, 122, 154) !important;
+}
+
+nav > ol > :first-child {
+  & > button {
+    cursor: pointer;
+    background-color:rgb(0, 191, 255)
+  }
+}
+
+.breadcrumb-button {
+  border-radius: 30px;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #6fbcd6;
+  border: none;
+
+  &:focus {
+    outline:none !important;
+
+  }
+}
+
 .movie-details::before {
   content: "";
   position: absolute;

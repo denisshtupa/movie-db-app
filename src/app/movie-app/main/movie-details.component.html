@@ -1,3 +1,13 @@
+<div class="custom-bradcrumb" *ngIf="this.movieDetail">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><button class="breadcrumb-button" (click)="goToPreviousPage()">{{this.type}}</button>
+      </li>
+      <li class="breadcrumb-item"> <button class="breadcrumb-button">{{this.movieDetail.title}} </button></li>
+    </ol>
+  </nav>
+</div>
+
 <div class="movie-details" [style.background-image]="this.backgroundImageUrl">
   <!-- <div class="rounded-circle">
     <a class="back-page" title="Go to all movies page" >
@@ -34,7 +44,7 @@
 
 <div class="movie-detail-summary" *ngIf="this.movieDetail">
   {{this.movieDetail.overview}}
-<!-- 
+  <!-- 
   <div class="movie-detail-rate">
 
     <div class="centerr">
@@ -68,7 +78,7 @@
       </div> -->
 
 
-    <!-- </div> -->
+  <!-- </div> -->
   <!-- </div> -->
 </div>
 
