@@ -1,9 +1,13 @@
 <div class="movie-details" [style.background-image]="this.backgroundImageUrl">
-  <div>
-    <a class="back-page" title="Go to all movies page" (click)="goToPreviousPage()">
-      <i class="fa fa-angle-left fa-2" [style.transform]="'scale(6)'"></i>
-    </a>
-  </div>
+  <!-- <div class="rounded-circle">
+    <a class="back-page" title="Go to all movies page" >
+        <span  (click)="goToPreviousPage()">
+        <svg  xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
+        </svg>
+      </span>
+      </a>
+  </div> -->
 
   <div class="details-section">
     <div class="details-img-section">
@@ -11,17 +15,17 @@
     </div>
     <div class="details-general-section">
       <div *ngIf="this.movieDetail">
-        <h1 [style.font-size]="'40px'" [style.font-weight]="'bold'">{{this.movieDetail.title}}</h1>
-        <h2>Rating: {{this.movieDetail.vote_average}} / 10</h2>
-        <div>
+        <h1 [style.font-size]="'40px'" [style.font-weight]="'bold'">{{this.movieDetail.title}}</h1><br>
+        <h2>Rating: {{this.movieDetail.vote_average}} / 10</h2><br>
+        <!-- <div>
           <div class="stars-outer">
             <div class="stars-inner" [style.width]="this.movieDetail.vote_average * 10+'%'"></div>
           </div>
-        </div>
+        </div> -->
         <div>
           <h3>{{this.returnGenres(this.movieDetail.genres)}}</h3>
-        </div>
-        <h4>{{this.movieDetail.release_date | date: 'mediumDate'}} / {{this.movieDetail.runtime}} mins</h4>
+        </div><br>
+        <h4>{{this.movieDetail.release_date | date: 'mediumDate'}} / {{this.movieDetail.runtime}} mins</h4><br>
         <h4>Status : {{this.movieDetail.status}}</h4>
       </div>
     </div>
@@ -30,9 +34,8 @@
 
 <div class="movie-detail-summary" *ngIf="this.movieDetail">
   {{this.movieDetail.overview}}
-
+<!-- 
   <div class="movie-detail-rate">
-    <!-- <h3> Rate "<strong>{{this.movieDetail.title}}</strong>"</h3> -->
 
     <div class="centerr">
       <div class="starss">
@@ -62,11 +65,11 @@
           <button type="button" class="btn btn-danger" (click)="removeRating()">Remove rating</button>
           <span *ngIf="reviewAdded" class="result">Thank you for review</span>
         </div>
-      </div>
+      </div> -->
 
 
-    </div>
-  </div>
+    <!-- </div> -->
+  <!-- </div> -->
 </div>
 
 <div class="cast" *ngIf="this.movieDetail">

@@ -4,14 +4,15 @@
   background-position: center top;
   position: relative;
   color: #fff;
-  min-height: 100vh;
+  min-height: 120vh;
   width: 100%;
   display: flex;
   opacity: 0.9;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5rem;
-  z-index: 1;
+  padding-top: 400px;
+  padding-left: 12%;
+  z-index: -1;
 }
 
 .movie-details::before {

@@ -26,11 +26,11 @@
         height: 46px;
         background-color: darken($db-dark-gary-1, 10%);
         margin: auto;
-        padding-top: 8px;
+        padding-top: 2px;
       }
 
-      div.rounded-circle > i {
-        transform: scale(1.4) !important;
+      div.rounded-circle > svg {
+        transform: scale(0.6) !important;
       }
 
       &:hover,

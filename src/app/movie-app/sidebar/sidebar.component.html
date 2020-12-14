@@ -6,7 +6,19 @@
         <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/new-movies']"
           [routerLinkActive]="'active-link'">
           <div class="rounded-circle">
-            <i class="fa fa-bell"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-movie" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <line x1="8" y1="4" x2="8" y2="20" />
+              <line x1="16" y1="4" x2="16" y2="20" />
+              <line x1="4" y1="8" x2="8" y2="8" />
+              <line x1="4" y1="16" x2="8" y2="16" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="16" y1="8" x2="20" y2="8" />
+              <line x1="16" y1="16" x2="20" y2="16" />
+            </svg>
           </div>
           <div class="d-md-block d-none">NEW</div>
         </button>
@@ -16,7 +28,11 @@
         <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/popular']"
           [routerLinkActive]="'active-link'">
           <div class="rounded-circle">
-            <i class="fa fa-film"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z"
+                clip-rule="evenodd" />
+            </svg>
           </div>
           <div class="d-md-block d-none">POPULAR</div>
         </button>
@@ -25,7 +41,10 @@
         <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/favorites']"
           [routerLinkActive]="'active-link'">
           <div class="rounded-circle">
-            <i class="fa fa-star"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
           </div>
           <div class="d-md-block d-none">FAVORITES</div>
         </button>
@@ -39,7 +58,14 @@
           <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/action']"
             [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-motorcycle"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-target" width="44" height="44"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
             </div>
             <div class="d-md-block d-none">Action</div>
           </button>
@@ -48,7 +74,18 @@
           <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/adventure']"
             [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-rocket"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-helicopter" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 10l1 2h6" />
+                <path d="M12 9a2 2 0 0 0 -2 2v3c0 1.1 .9 2 2 2h7a2 2 0 0 0 2 -2c0 -3.31 -3.13 -5 -7 -5h-2z" />
+                <line x1="13" y1="9" x2="13" y2="6" />
+                <line x1="5" y1="6" x2="20" y2="6" />
+                <path d="M15 9.1v3.9h5.5" />
+                <line x1="15" y1="19" x2="15" y2="16" />
+                <line x1="19" y1="19" x2="11" y2="19" />
+              </svg>
             </div>
             <div class="d-md-block d-none">Adventure</div>
           </button>
@@ -57,7 +94,13 @@
           <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/animation']"
             [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-paw"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+              </svg>
             </div>
             <div class="d-md-block d-none">Animation</div>
           </button>
@@ -66,7 +109,10 @@
           <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/comedy']"
             [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-users"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
             </div>
             <div class="d-md-block d-none">Comedy</div>
           </button>
@@ -75,7 +121,10 @@
           <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/documentary']"
             [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-book"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
             </div>
             <div class="d-md-block d-none">Documentary</div>
           </button>
@@ -84,7 +133,13 @@
           <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/drama']"
             [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-heartbeat"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart-broken" width="44"
+                height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                <path d="M12 7l-2 4l4 3l-2 4v3" />
+              </svg>
             </div>
             <div class="d-md-block d-none">Drama</div>
           </button>
@@ -93,7 +148,16 @@
           <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/horror']"
             [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-bolt"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ghost" width="44" height="44"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" />
+                <line x1="10" y1="10" x2="10.01" y2="10" />
+                <line x1="14" y1="10" x2="14.01" y2="10" />
+                <path d="M10 14a3.5 3.5 0 0 0 4 0" />
+              </svg>
             </div>
             <div class="d-md-block d-none">Horror</div>
           </button>
@@ -102,7 +166,10 @@
           <button class="btn btn-link btn-block nav-link" [routerLink]="['/movie-db/romance']"
             [routerLinkActive]="'active-link'">
             <div class="rounded-circle">
-              <i class="fa fa-heart"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
             </div>
             <div class="d-md-block d-none">Romance</div>
           </button>

@@ -30,9 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "src/styles.scss"          
-            ],
+            "src/styles.scss"
+          ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/js/dist/util.js",
