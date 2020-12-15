@@ -1,3 +1,4 @@
+import { HelperFunctions } from './../../../shared/helper functions/helper-functions';
 import { IMoviesResponsePaginated, IMovieDetail } from './../../../shared/interfaces/moviedb.interfaces';
 import { MovieService } from './../../../services/movie-service.service';
 import { Component } from '@angular/core';
@@ -24,7 +25,8 @@ export class NewMoviesComponent {
     public loadNewMovies(page: number = 1) {
         this._movieService.getNewMovies(page).subscribe(res => {
             this.movieObject = res;
-            this.movieList = res.results;            
+            this.movieList = res.results;
+            HelperFunctions.scrollToTop();         
             this.initPagination(page, res.total_pages, res.total_results, 20);
         })
     }

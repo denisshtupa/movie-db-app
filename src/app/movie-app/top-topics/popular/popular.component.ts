@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieService } from 'src/app/services/movie-service.service';
+import { HelperFunctions } from 'src/app/shared/helper functions/helper-functions';
 import { IMovieDetail, IMoviesResponsePaginated } from 'src/app/shared/interfaces/moviedb.interfaces';
 import { IPagination } from 'src/app/shared/interfaces/paginator.interface';
 
@@ -25,6 +26,7 @@ export class PopularComponent {
     this._movieService.getPopularMovies(page).subscribe(res => {
       this.movieObject = res;
       this.movieList = res.results;
+      HelperFunctions.scrollToTop();
       this.initPagination(page, res.total_pages, res.total_results, 20);
     })
   }

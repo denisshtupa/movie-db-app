@@ -2,23 +2,25 @@
   <div class="text-center" *ngIf="paginationData">
     <ul class="pagination text-center">
       <li>
-        <a [class.disabled]="!showPrevPageLink()" (click)="navigateToPage(1)" title="First">
-          <i class="fa fa-angle-double-left fa-2"></i></a>
+        <span [class.disabled]="!showPrevPageLink()" (click)="navigateToPage(1)" title="First" style="padding-top: 10px; position: relative;top: 3px;">
+          <i class="material-icons">arrow_back</i></span>
       </li>
       <li>
-        <a [class.disabled]="!showPrevPageLink()" (click)="navigateToPrevPage()" title="Previous">
-          <i class="fa fa-angle-left fa-2"></i></a>
+        <span [class.disabled]="!showPrevPageLink()" (click)="navigateToPrevPage()" title="Previous"
+          style="padding-top: 10px; position: relative;top: 3px;">
+          <i class="large material-icons">chevron_left</i>
+        </span>
       </li>
       <li *ngFor="let pageNr of this.pages; let idx" [class.active]="pageNr == this.paginationData.currentPage">
         <a (click)="navigateToPage(pageNr)">{{pageNr}}</a>
       </li>
       <li>
-        <a [class.disabled]="!showNextPageLink()" (click)="navigateToNextPage()" title="Next">
-          <i class="fa fa-angle-right fa-2"></i></a>
+        <span [class.disabled]="!showNextPageLink()" (click)="navigateToNextPage()" title="Next" style="padding-top: 10px; position: relative;top: 3px;">
+          <i class="material-icons">chevron_right</i></span>
       </li>
       <li>
-        <a [class.disabled]="!showNextPageLink()" (click)="navigateToPage(paginationData.totalPages)" title="Last">
-          <i class="fa fa-angle-double-right fa-2"></i></a>
+        <span [class.disabled]="!showNextPageLink()" (click)="navigateToPage(paginationData.totalPages)" title="Last" style="padding-top: 10px; position: relative;top: 3px;">
+          <i class="material-icons">arrow_forward</i></span>
       </li>
     </ul>
   </div>

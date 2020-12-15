@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MovieService } from 'src/app/services/movie-service.service';
 import { IMovieDetail, IMoviesResponsePaginated } from 'src/app/shared/interfaces/moviedb.interfaces';
 import { IPagination } from 'src/app/shared/interfaces/paginator.interface';
+import { HelperFunctions } from 'src/app/shared/helper functions/helper-functions';
 
 @Component({
     selector: 'action',
@@ -26,6 +27,7 @@ export class ActionComponent {
         this._movieService.getMoviesByGenre(page, GenresEnum.Action).subscribe(res => {
             this.movieObject = res;
             this.movieList = res.results;
+            HelperFunctions.scrollToTop();
             this.initPagination(page, res.total_pages, res.total_results, 20);
         })
     }

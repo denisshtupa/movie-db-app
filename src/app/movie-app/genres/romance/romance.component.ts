@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MovieService } from 'src/app/services/movie-service.service';
 import { GenresEnum } from 'src/app/shared/enumerations';
+import { HelperFunctions } from 'src/app/shared/helper functions/helper-functions';
 import { IMovieDetail, IMoviesResponsePaginated } from 'src/app/shared/interfaces/moviedb.interfaces';
 import { IPagination } from 'src/app/shared/interfaces/paginator.interface';
 
@@ -26,6 +27,7 @@ export class RomanceComponent {
         this._movieService.getMoviesByGenre(page, GenresEnum.Romance).subscribe(res => {
             this.movieObject = res;
             this.movieList = res.results;
+            HelperFunctions.scrollToTop();
             this.initPagination(page, res.total_pages, res.total_results, 20);
         })
     }
