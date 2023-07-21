@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MovieService } from 'src/app/services/movie-service.service';
 import { GenresEnum } from 'src/app/shared/enums/enumerations';
 import { HelperFunctions } from 'src/app/shared/utils/helper-functions';
@@ -9,10 +9,12 @@ import {
 import { IPagination } from 'src/app/shared/interfaces/paginator.interface';
 
 @Component({
-  selector: 'search-results',
-  templateUrl: './search-results.component.html',
+  selector: 'movie-genres',
+  templateUrl: './genres.component.html',
 })
-export class SearchResultsComponent {
+export class GenresComponent implements OnChanges, OnInit {
+  @Input() public movieGenre: GenresEnum | number = GenresEnum.Action;
+
   public movieObject: IMoviesResponsePaginated | any;
   public movieList: Array<IMovieDetail> = [];
   public pagination: IPagination | any;
@@ -20,41 +22,31 @@ export class SearchResultsComponent {
   constructor(private _movieService: MovieService) {}
 
   ngOnInit() {
-    this.searchMovie();
+    this.loadNewMovies();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.movieGenre && !changes.movieGenre.firstChange) {
+      // Check if movieGenre has changed and is not the initial change (firstChange)
+      this.loadNewMovies();
+    }
   }
 
   public loadNewMovies(page: number = 1) {
-    this._movieService.getMoviesByGenre(page, GenresEnum.Action)
+    if(this.movieGenre != 1) {
+      this._movieService.getMoviesByGenre(page, this.movieGenre)
       .subscribe((res: IMoviesResponsePaginated) => {
         this.movieObject = res;
         this.movieList = res.results;
         HelperFunctions.scrollToTop();
         this.initPagination(page, res.total_pages, res.total_results, 20);
       });
-  }
-
-  public checkSessionStorageSearchString(): string {
-    const val = localStorage.getItem('searchString');
-    if (val) {
-      return val.trim();
     }
-    return '';
-  }
 
-  public searchMovie(page: number = 1) {
-    const val = localStorage.getItem('searchString');
-
-    if (val) {
-      this._movieService.searchGloballyForMovie(val, page).subscribe((res: IMoviesResponsePaginated) => {
-        this.movieObject = res;
-        this.movieList = res.results;
-        this.initPagination(page, res.total_pages, res.total_results, 20);
-      });
-    }
   }
 
   public loadNewMoviesPaginated() {
-    this.searchMovie(this.pagination.currentPage);
+    this.loadNewMovies(this.pagination.currentPage);
   }
 
   private initPagination(

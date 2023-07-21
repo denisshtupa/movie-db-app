@@ -1,13 +1,12 @@
 .paginator {
   position: absolute;
   padding: 60px 0 20px 275px;
-  transform: scale(2);
+  transform: scale(1.5);
   color: $db-dark-gary-1 !important;
   cursor: pointer !important;
 }
 
 .pagination {
-
   >li>a,
   >li>span {
     border: 0;

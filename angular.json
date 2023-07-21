@@ -30,8 +30,8 @@
               "src/assets"
             ],
             "styles": [
-            "src/styles.scss"
-          ],
+              "src/styles.scss"
+            ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/js/dist/util.js",
@@ -44,7 +44,8 @@
               "node_modules/bootstrap/js/dist/scrollspy.js",
               "node_modules/bootstrap/js/dist/tab.js",
               "node_modules/bootstrap/js/dist/tooltip.js",
-              "node_modules/bootstrap/js/dist/popover.js"
+              "node_modules/bootstrap/js/dist/popover.js",
+              "node_modules/lodash/lodash.js"
             ]
           },
           "configurations": {
@@ -55,13 +56,6 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -73,9 +67,19 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ]
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "extractLicenses": false,
+              "vendorChunk": true
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -85,8 +89,12 @@
           "configurations": {
             "production": {
               "browserTarget": "movie-db-app:build:production"
+            },
+            "development": {
+              "browserTarget": "movie-db-app:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -139,7 +147,6 @@
       }
     }
   },
-  "defaultProject": "movie-db-app",
   "cli": {
     "analytics": "33d65413-7317-4652-81d4-a0aa089b821c"
   }

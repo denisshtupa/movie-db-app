@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieService } from 'src/app/services/movie-service.service';
-import { HelperFunctions } from 'src/app/shared/helper functions/helper-functions';
+import { HelperFunctions } from 'src/app/shared/utils/helper-functions';
 import { IMovieDetail, IMoviesResponsePaginated } from 'src/app/shared/interfaces/moviedb.interfaces';
 import { IPagination } from 'src/app/shared/interfaces/paginator.interface';
 
@@ -23,7 +23,7 @@ export class FavoritesComponent {
   }
 
   public loadNewMovies(page: number = 1) {
-    this._movieService.getFavoritesMovies(page).subscribe(res => {
+    this._movieService.getFavoritesMovies(page).subscribe((res: IMoviesResponsePaginated) => {
       this.movieObject = res;
       this.movieList = res.results;
       HelperFunctions.scrollToTop();
