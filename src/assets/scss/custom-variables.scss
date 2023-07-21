@@ -29,7 +29,6 @@ $db-status-yellow: #ffcc00;
 $db-status-orange: #fbab18;
 $db-status-red: #e2231a;
 
-
 $primary:       $db-blue !default;
 $secondary:     $db-vibrant-blue !default;
 $success:       $db-green !default;
@@ -40,5 +39,5 @@ $light:         $db-light-gray-5 !default;
 $dark:          $db-dark-gary-2 !default;
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }

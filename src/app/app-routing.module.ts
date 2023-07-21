@@ -1,4 +1,3 @@
-import { MovieAppComponent } from './movie-app/movie-app.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

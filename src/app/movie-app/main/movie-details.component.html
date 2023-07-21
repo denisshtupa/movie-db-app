@@ -9,16 +9,6 @@
 </div>
 
 <div class="movie-details" [style.background-image]="this.backgroundImageUrl">
-  <!-- <div class="rounded-circle">
-    <a class="back-page" title="Go to all movies page" >
-        <span  (click)="goToPreviousPage()">
-        <svg  xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
-        </svg>
-      </span>
-      </a>
-  </div> -->
-
   <div class="details-section">
     <div class="details-img-section">
       <img [src]="this.posterImageUrl">
@@ -27,11 +17,6 @@
       <div *ngIf="this.movieDetail">
         <h1 [style.font-size]="'40px'" [style.font-weight]="'bold'">{{this.movieDetail.title}}</h1><br>
         <h2>Rating: {{this.movieDetail.vote_average}} / 10</h2><br>
-        <!-- <div>
-          <div class="stars-outer">
-            <div class="stars-inner" [style.width]="this.movieDetail.vote_average * 10+'%'"></div>
-          </div>
-        </div> -->
         <div>
           <h3>{{this.returnGenres(this.movieDetail.genres)}}</h3>
         </div><br>
@@ -44,42 +29,6 @@
 
 <div class="movie-detail-summary" *ngIf="this.movieDetail">
   {{this.movieDetail.overview}}
-  <!-- 
-  <div class="movie-detail-rate">
-
-    <div class="centerr">
-      <div class="starss">
-        <input type="radio" id="ten" name="rate" [(ngModel)]="reviewValue" value="10">
-        <label for="ten"></label>
-        <input type="radio" id="nine" name="rate" [(ngModel)]="reviewValue" value="9">
-        <label for="nine"></label>
-        <input type="radio" id="eight" name="rate" [(ngModel)]="reviewValue" value="8">
-        <label for="eight"></label>
-        <input type="radio" id="seven" name="rate" [(ngModel)]="reviewValue" value="7">
-        <label for="seven"></label>
-        <input type="radio" id="six" name="rate" [(ngModel)]="reviewValue" value="6">
-        <label for="six"></label>
-        <input type="radio" id="five" name="rate" [(ngModel)]="reviewValue" value="5">
-        <label for="five"></label>
-        <input type="radio" id="four" name="rate" [(ngModel)]="reviewValue" value="4">
-        <label for="four"></label>
-        <input type="radio" id="three" name="rate" [(ngModel)]="reviewValue" value="3">
-        <label for="three"></label>
-        <input type="radio" id="two" name="rate" [(ngModel)]="reviewValue" value="2">
-        <label for="two"></label>
-        <input type="radio" id="one" name="rate" [(ngModel)]="reviewValue" value="1">
-        <label for="one"></label>
-
-        <div class="review-buttons">
-          <button type="button" class="btn btn-success" (click)="addRating()">Add rating</button>
-          <button type="button" class="btn btn-danger" (click)="removeRating()">Remove rating</button>
-          <span *ngIf="reviewAdded" class="result">Thank you for review</span>
-        </div>
-      </div> -->
-
-
-  <!-- </div> -->
-  <!-- </div> -->
 </div>
 
 <div class="cast" *ngIf="this.movieDetail">
@@ -90,8 +39,12 @@
       <a class="card-link">
         <div class="movie-card">
           <div class="movie-poster">
-            <img [src]="'https://image.tmdb.org/t/p/original' + cast.profile_path" width="100%" height="300"
-              alt="No poster available for this actor" />
+            <img
+              [src]="'https://image.tmdb.org/t/p/original' + cast.profile_path"
+              width="100%"
+              height="300"
+              alt="No poster available for this actor"
+            />
           </div>
 
           <div class="movie-title">
@@ -102,5 +55,4 @@
       </a>
     </div>
   </div>
-
 </div>
