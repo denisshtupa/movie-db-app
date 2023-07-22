@@ -18,6 +18,7 @@ export class GenresComponent implements OnChanges, OnInit {
   public movieObject: IMoviesResponsePaginated | any;
   public movieList: Array<IMovieDetail> = [];
   public pagination: IPagination | any;
+  public isLoading: boolean = false;
 
   constructor(private _movieService: MovieService) {}
 
@@ -34,15 +35,16 @@ export class GenresComponent implements OnChanges, OnInit {
 
   public loadNewMovies(page: number = 1) {
     if(this.movieGenre != 1) {
+      this.isLoading = true;
       this._movieService.getMoviesByGenre(page, this.movieGenre)
       .subscribe((res: IMoviesResponsePaginated) => {
         this.movieObject = res;
         this.movieList = res.results;
         HelperFunctions.scrollToTop();
         this.initPagination(page, res.total_pages, res.total_results, 20);
+        this.isLoading = false;
       });
     }
-
   }
 
   public loadNewMoviesPaginated() {
@@ -59,7 +61,7 @@ export class GenresComponent implements OnChanges, OnInit {
       currentPage: pageNumber,
       totalCount: totalElements,
       totalPages: totalPages,
-      pageSize: pageSize,
+      pageSize: pageSize
     };
   }
 }

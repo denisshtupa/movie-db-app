@@ -15,6 +15,7 @@ export class NewMoviesComponent {
   public movieObject: IMoviesResponsePaginated | any;
   public movieList: Array<IMovieDetail> = [];
   public pagination: IPagination | any;
+  public isLoading: boolean = false;
 
   constructor(private _movieService: MovieService) {}
 
@@ -23,11 +24,13 @@ export class NewMoviesComponent {
   }
 
   public loadNewMovies(page: number = 1) {
+    this.isLoading = true;
     this._movieService.getNewMovies(page).subscribe((res: IMoviesResponsePaginated) => {
       this.movieObject = res;
       this.movieList = res.results;
       HelperFunctions.scrollToTop();
       this.initPagination(page, res.total_pages, res.total_results, 20);
+      this.isLoading = false;
     });
   }
 
@@ -45,7 +48,7 @@ export class NewMoviesComponent {
       currentPage: pageNumber,
       totalCount: totalElements,
       totalPages: totalPages,
-      pageSize: pageSize,
+      pageSize: pageSize
     };
   }
 }
