@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
-To access deployed version on your browser, click this link here [movie-db-app](https://denisshtupa.github.io/movie-db-app/)
+To access deployed version on your browser, click this link here [movie-db-app](https://denisshtupa.github.io/movie-db-app/movie-db/new-movies)
 
 ## Development server
 
