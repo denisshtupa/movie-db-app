@@ -24,11 +24,11 @@
         height: 46px;
         background-color: darken($db-dark-gary-1, 10%);
         margin: auto;
-        padding-top: 2px;
-      }
+        padding-top: 10px;
 
-      div.rounded-circle > svg {
-        transform: scale(0.6) !important;
+        .fa-solid {
+          color: $db-vibrant-blue;
+        }
       }
 
       &:hover,
@@ -85,7 +85,6 @@
   z-index: 1030;
 }
 
-
 .sidebar-sticky {
   position: relative;
   top: 0;
@@ -95,7 +94,23 @@
   padding-left: 10px;
   overflow-x: hidden;
   overflow-y: auto;
-  /* Scrollable contents if viewport is shorter than content. */
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
 .flex-column > li > button {
@@ -112,9 +127,8 @@
 
 .active-link {
   background-color: $primary !important;
-  opacity:0.6 !important;
+  opacity: 0.6 !important;
   color: $db-orange !important;
   border-radius: 8px !important;
   font-weight: bold !important;
-  font-size: 22px !important;
 }

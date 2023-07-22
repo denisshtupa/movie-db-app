@@ -43,6 +43,9 @@ export class PaginatorComponent implements OnInit {
       startPage = 1;
       endPage = this.paginationData.totalItems;
     } else {
+      if(this.paginationData.totalPages > 500) {
+        this.paginationData.totalPages = 500;
+      }
       if (this.paginationData.currentPage <= 3) {
         startPage = 1;
         endPage = 5;

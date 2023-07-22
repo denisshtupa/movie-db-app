@@ -24,8 +24,7 @@ export class SearchResultsComponent {
   }
 
   public loadNewMovies(page: number = 1) {
-    this._movieService.getMoviesByGenre(page, GenresEnum.Action)
-      .subscribe((res: IMoviesResponsePaginated) => {
+    this._movieService.getMoviesByGenre(page, GenresEnum.Action).subscribe((res: IMoviesResponsePaginated) => {
         this.movieObject = res;
         this.movieList = res.results;
         HelperFunctions.scrollToTop();

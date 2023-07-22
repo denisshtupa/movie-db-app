@@ -1,4 +1,4 @@
-import { MovieService } from './../services/movie-service.service';
+import { MovieService } from '../services/movie-service.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -14,9 +14,9 @@ import {
   SidebarComponent,
 } from '.';
 import { MovieAppRoutingModule } from './movie-app-routing.module';
-import { PaginatorComponent } from '../shared/general-components/paginator/paginator.component';
 import { GenresComponent } from './genres/genres.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -30,11 +30,14 @@ import { FormsModule } from '@angular/forms';
     FavoritesComponent,
     NewMoviesComponent,
     PopularComponent,
-    PaginatorComponent,
     GenresComponent,
   ],
-  imports: [CommonModule, FormsModule, MovieAppRoutingModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    FormsModule,
+    MovieAppRoutingModule
+  ],
   providers: [MovieService],
-  bootstrap: [],
 })
 export class MovieModule {}
