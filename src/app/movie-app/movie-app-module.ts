@@ -35,6 +35,5 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [CommonModule, FormsModule, MovieAppRoutingModule],
   providers: [MovieService],
-  bootstrap: [],
 })
 export class MovieModule {}

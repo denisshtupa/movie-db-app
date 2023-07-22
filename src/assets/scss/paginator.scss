@@ -7,6 +7,10 @@
 }
 
 .pagination {
+  >ul>li>span {
+    padding: 5px;
+  }
+
   >li>a,
   >li>span {
     border: 0;
