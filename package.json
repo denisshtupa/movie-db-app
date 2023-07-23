@@ -8,9 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prod": "ng build --prod",
-    "gh-pages-deploy": "ng build --base-href 'https://denisshtupa.github.io/movie-db-app/'",
-    "deploy": "npx angular-cli-ghpages --dir=dist/movie-db-app"
+    "prod": "ng build --configuration=production",
+    "create-deploy-branch": "bash create-deploy-branch.sh",
+    "deploy": "bash gh-deploy.sh"
+
   },
   "private": true,
   "dependencies": {
