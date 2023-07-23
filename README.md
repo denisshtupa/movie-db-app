@@ -4,6 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 To access deployed version on your browser, click this link here [movie-db-app](https://denisshtupa.github.io/movie-db-app/movie-db/new-movies)
 
+## Deploy to github pages
+Run first `npm run create-deploy-branch`
+Make sure to publish the just created branch. Publish it manually if not pushed automatically.
+Select just created `gh-pages` branch on github pages
+Run finally `npm run deploy`
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
